@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Gallery</title>
+<script text="text/javascript">
+	function colors()
+	{
+		window.document.bgColor=form1.color.value
+	}
+	function setToRed()
+		{
+			document.bgColor="pink"
+			setTimeout("setToBlue()",1000);
+		}
+		function setToGreen()
+		{
+			document.bgColor="green"
+			setTimeout("setToRed()",1000);
+		}
+		function setToBlue()
+		{
+			document.bgColor="blue"
+			setTimeout("setToGreen()",1000);
+		}	
+	</script> 
+	</head>
+<body bgcolor="white">
+<center><img src="14.jpg" height="500" width="1200"></center>
+<a href="Home.html" target="body" onmouseover="style.color='white'" onmouseout="style.color='yellow'"><center>HOME</center></a>
+
+<body>
+<hr>
+
+<form name="form1">
+<center>
+<h1>Choose Color:-</h1>
+<br>
+<select name="color" onChange="colors()">
+<option></option>
+<option>BLUE</option>
+<option>RED</option>
+<option>YELLOW</option>
+<option>GREEN</option>
+</select>
+<center><input type="button" onclick="setToRed()" value="Multi Colours" ></center>
+<hr>
+<hr>
+</center>
+</form>
+</body>
+</html>

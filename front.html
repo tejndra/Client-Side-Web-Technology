@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script text="text/javascript">
+	username=""
+	password=""
+	function login()
+	{
+		if((form1.username.value=='tej') && (form1.password.value=='tej'))
+		newwindow=window.open("Home.html")
+		else
+		alert("Username Or Pass is Incorrect...")
+	}
+	alert("Sign In Or Click 'ENTER' To Enter as a guest.... ")
+	</script> 
+	</head>
+<body>
+<hr>
+<center><a href="Home.html"><img src="b.jpg" height="500" width="1200" ></a></center>
+<form name="form1">
+<center>
+<h1>LOG IN...</h1>
+<br>
+UserName&nbsp;&nbsp;<input type="text" name="username">
+<br><br>
+Password&nbsp;&nbsp;<input type="password" name="password">
+<br><br>
+<input type="button" value="SIGN IN" onclick="login()" >
+
+<hr>
+<hr>
+</center>
+</form>
+
+</body>
+</html>

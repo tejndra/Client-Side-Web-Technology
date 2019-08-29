@@ -1,0 +1,22 @@
+<html>
+<head>
+<script language="JavaScript">
+function checkpostal(){
+var str=document.myform.myinput.value
+//For Only Alphabets
+var patt=/^[a-zA-Z]+$/
+
+if(patt.test(str))
+alert("VALID DATA ")
+else
+alert("PLEASE ENTER VALID DATA !!")
+}
+</script>
+</head>
+<body>
+<form name="myform">
+<input type="text" name="myinput">
+<input type="button" onclick="checkpostal()" value="check">
+</form>
+</body>
+</html>

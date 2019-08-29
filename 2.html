@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>hacking registration</title>
+<script type="text/javascript">
+function amount()
+{
+	var amt=document.getElementById("module").value
+	alert("THE AMOUNT FOR THIS MODULE IS $"+amt )
+}
+function kit()
+{
+var hkit="You Have Selected Hacking Kit For... $ "
+if(form1.kits.checked)
+	hkit=hkit+form1.kits.value
+alert(hkit)
+	}
+function check()
+{
+  var str=document.form1.NAME.value
+  //For Only Alphabets
+  var patt=/^[a-zA-Z]+$/
+  //For only digits
+  var prn=document.form1.PRN.value
+  var patts=/^[0-9]+$/
+  //Only for 10 digits according to "d"
+  var pn=document.form1.PN.value
+  var pattr=/^\d\d\d\d\d\d\d\d\d\d$/
+
+  n=document.getElementById("names").value
+  m=document.getElementById("prn").value
+  amt=document.getElementById("module").value
+  amt1=parseInt(amt)
+  kits=document.getElementById("kits").value
+  kits1=parseInt(kits)
+  if(form1.kits.checked)
+  total=amt1+kits1
+  
+  else
+  total=amt1
+  
+  if(n=="" || m=="" )
+	 {
+	 alert("**Please fill mandatory fields....")
+	 }
+  
+  else if(patt.test(str) && patts.test(prn) && pattr.test(pn) )
+	 {
+	 alert("CONGRATULATIONS "+n+" FOR REGISTERING AND YOUR FINAL AMOUNT=$"+total+"..")
+	 }
+	 
+  else
+	 {
+	 alert("Invalid Input")
+	 }
+	 
+}	
+function Closewindow()
+{
+		newwindow=window.close()
+}
+</script>
+</head>
+<body background="back.jpg">
+<br>
+<br>
+<br>
+<center>
+<form method="post" name ="form1">
+<font color="white"><table border=1>
+<tr><td><h1>**NAME</td><td><input type="text" size="30" name="NAME" id="names"><h1></td></tr>
+<tr><td><h1>**PRN</td><td><input type="text" size="30" name="PRN" id="prn"><h1></td></tr>
+<tr><td><h1>PHONE NO.</td><td><input type="text" size="30" name="PHONE NO" id="PN"><h1></td></tr>
+<tr><td><h1>COLLEGE</td><td><input type="text" size="30" name="COLLEGE"><h1></td></tr>
+<tr><td><h1>MODULES</td><td><select id="module" onChange="amount()" name="course"><option>---SELECT YOUR MODULE---</option>
+									<option value="20">GOOGLE HACKING</option>
+									<option value="30">TROJAN MALWARE</option>			
+									<option value="35">WIRELESS TECHNOLOGY</option>
+									<option value="25">SOCIAL ENGINEERING</option></select><h1></td></tr>
+
+<tr><td><h1>HACKING KIT</td><td><input type="checkbox" size="30" name="kits" value="50" onchange="kit()" id="kits"><h1></td></tr>
+<tr><td><h1>UPDATE</td><td><input type="button" size="30" name="update" value="Register" onclick="check()"><h1></td></tr>
+<tr><td><h1>RESET</td><td><input type="reset" size="30" name="reset"><h1></td></tr>
+<tr><td><h1>CLOSE</td><td><input id="closes" type="button" size="30" value="Double Click To CLOSE" onDblClick="Closewindow()"><h1></td></tr>
+
+
+</table></font></center>
+</form>
+<center>
+<a href="Home.html" target="body" onmouseover="style.color='white'" onmouseout="style.color='blue'"></a></center>
+
+</body>
+</html>
